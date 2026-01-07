@@ -157,25 +157,40 @@
     align-items: center;
     justify-content: center;
 
-    padding: 6px;
-    border-radius: 8px;
-    background: transparent;
+    padding: 5px;                 /* quiet zone */
+    background: #ffffff;          /* important for scan */
+    border: 1.5px solid #5e35b1;
+    border-radius: 6px;
+
     box-sizing: border-box;
 }
 
-.qr-inner {
-    background: #ffffff;      /* quiet zone */
-    padding: 6px;
-    border-radius: 6px;
-    border: 2px solid #5e35b1;
-}
-
-.qr-inner img {
-    width: 110px;             /* ✅ ideal scanning size */
-    height: 110px;
+/* QR size control */
+.qr-placeholder img,
+.qr-placeholder canvas,
+.qr-placeholder svg {
+    width: 100px;                 /* desktop */
+    height: 100px;
     display: block;
     image-rendering: pixelated;
 }
+
+/* Mobile responsive */
+@media (max-width: 768px) {
+    .qr-placeholder img,
+    .qr-placeholder canvas,
+    .qr-placeholder svg {
+        width: 88px;              /* mobile safe */
+        height: 88px;
+    }
+
+    .qr-placeholder {
+        padding: 4px;
+        border-width: 1px;
+    }
+}
+
+
 
 
         .donation-info {
