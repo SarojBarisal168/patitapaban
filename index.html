@@ -153,20 +153,30 @@
         }
 
         .qr-placeholder {
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-    border-radius: 8px;
-    display: inline-flex;   /* important */
+    display: inline-flex;
     align-items: center;
     justify-content: center;
-    margin: 10px auto;
+
     padding: 6px;
+    border-radius: 8px;
+    background: transparent;
+    box-sizing: border-box;
+}
+
+.qr-inner {
+    background: #ffffff;      /* quiet zone */
+    padding: 6px;
+    border-radius: 6px;
     border: 2px solid #5e35b1;
 }
 
-.qr-placeholder img {
-    width: 80px;   /* 🔽 control QR size here */
-    height: 80px;
+.qr-inner img {
+    width: 110px;             /* ✅ ideal scanning size */
+    height: 110px;
+    display: block;
+    image-rendering: pixelated;
 }
+
 
         .donation-info {
             margin-top: 20px;
