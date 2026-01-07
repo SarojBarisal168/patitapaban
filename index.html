@@ -278,15 +278,48 @@
             nav a { margin: 0 10px; font-size: 1em; }
             .services { grid-template-columns: 1fr; }
         }
+
+     
+.header {
+    position: relative;
+    text-align: center;   /* Keeps content same position */
+    padding: 20px 20px 20px 100px; /* Space for image */
+}
+
+ .header-img {
+    position: absolute;
+    left: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 200px;        /* increased */
+    height: 200px;       /* increased */
+    object-fit: contain;
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+    .header {
+        padding-left: 20px;
+    }
+
+    .header-img {
+        position: static;
+        transform: none;
+        margin-bottom: 10px;
+    }
+}
+
+        
     </style>
 </head>
 <body>
-    <header>
-        <div class="om-symbol">🕉️</div>
-        <h1>ପତିତପାବନ ଦେବ</h1>
-        <p class="subtitle">ଶ୍ରୀ ଜଗନ୍ନାଥ ମନ୍ଦିର</p>
-        <p class="location">📍 ବଡପୋଖରିଆ, ଖୋର୍ଦ୍ଧା, ଓଡ଼ିଶା</p>
-    </header>
+   <header class="header">
+    <img src="image_1.jpg" alt="God" class="header-img">
+    <div class="om-symbol">🕉️</div>
+    <h1>ପତିତପାବନ ଦେବ</h1>
+    <p class="subtitle">ଶ୍ରୀ ଜଗନ୍ନାଥ ମନ୍ଦିର</p>
+    <p class="location">📍 ବଡପୋଖରିଆ, ଖୋର୍ଦ୍ଧା, ଓଡ଼ିଶା</p>
+   </header>
 
     <nav>
         <a href="#about">ବିଷୟରେ</a>
