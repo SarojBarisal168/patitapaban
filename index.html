@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="or">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ପତିତପାବନ ଦେବ - ଜଗନ୍ନାଥ ମନ୍ଦିର, ବଡପୋଖରିଆ</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Anek+Odia:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Anek Odia', 'Noto Sans Oriya', 'Kalinga', sans-serif;
+            background: linear-gradient(135deg, #ffecd2 0%, #fcb69f 100%);
+            color: #333;
+            line-height: 1.8;
+        }
+
+        header {
+            background: linear-gradient(135deg, #ff6b35 0%, #f7931e 100%);
+            color: white;
+            text-align: center;
+            padding: 40px 20px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+            position: relative;
+            overflow: hidden;
+        }
+
+        header::before {
+            content: '🕉️';
+            position: absolute;
+            font-size: 200px;
+            opacity: 0.1;
+            top: -50px;
+            right: -50px;
+            animation: rotate 20s linear infinite;
+        }
+
+        @keyframes rotate {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+
+        h1 {
+            font-size: 3em;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+            animation: fadeInDown 1s ease-out;
+        }
+
+        @keyframes fadeInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .subtitle {
+            font-size: 1.3em;
+            margin-top: 10px;
+            font-style: italic;
+        }
+
+        .location {
+            margin-top: 10px;
+            font-size: 1.1em;
+            opacity: 0.95;
+        }
+
+        nav {
+            background: #d84315;
+            padding: 15px;
+            text-align: center;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 20px;
+            font-size: 1.2em;
+            transition: all 0.3s;
+            padding: 5px 10px;
+            border-radius: 5px;
+        }
+
+        nav a:hover {
+            background: rgba(255,255,255,0.2);
+            transform: scale(1.1);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+
+        .section {
+            background: white;
+            padding: 40px;
+            margin: 30px 0;
+            border-radius: 15px;
+            box-shadow: 0 8px 30px rgba(0,0,0,0.15);
+            animation: fadeIn 1s ease-out;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .section h2 {
+            color: #ff6b35;
+            font-size: 2.3em;
+            margin-bottom: 25px;
+            text-align: center;
+            border-bottom: 3px solid #f7931e;
+            padding-bottom: 10px;
+        }
+
+        .deity-section {
+            text-align: center;
+            background: linear-gradient(135deg, #fff8e1 0%, #ffe0b2 100%);
+        }
+
+        .deity-section p {
+            font-size: 1.3em;
+            line-height: 2;
+            margin: 20px 0;
+        }
+
+        .donation-section {
+            background: linear-gradient(135deg, #e8f5e9 0%, #c8e6c9 100%);
+            text-align: center;
+        }
+
+        .donation-box {
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            display: inline-block;
+            margin: 20px auto;
+            box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+        }
+
+        .qr-placeholder {
+            width: 300px;
+            height: 300px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            border-radius: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 20px auto;
+            color: white;
+            font-size: 1.2em;
+            text-align: center;
+            padding: 20px;
+            border: 5px solid #5e35b1;
+        }
+
+        .donation-info {
+            margin-top: 20px;
+            font-size: 1.2em;
+            color: #2e7d32;
+            font-weight: bold;
+        }
+
+        .services {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+            margin-top: 30px;
+        }
+
+        .service-card {
+            background: linear-gradient(135deg, #ffebee 0%, #ffcdd2 100%);
+            padding: 25px;
+            border-radius: 10px;
+            text-align: center;
+            transition: transform 0.3s, box-shadow 0.3s;
+            cursor: pointer;
+        }
+
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+        }
+
+        .service-card h3 {
+            color: #c62828;
+            margin-bottom: 15px;
+            font-size: 1.6em;
+        }
+
+        .service-card p {
+            font-size: 1.1em;
+        }
+
+        footer {
+            background: #d84315;
+            color: white;
+            text-align: center;
+            padding: 30px;
+            margin-top: 50px;
+        }
+
+        .contact-info {
+            margin: 20px 0;
+            font-size: 1.2em;
+            line-height: 2;
+        }
+
+        .btn {
+            background: #ff6b35;
+            color: white;
+            padding: 15px 35px;
+            border: none;
+            border-radius: 30px;
+            font-size: 1.2em;
+            cursor: pointer;
+            transition: all 0.3s;
+            margin: 10px;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .btn:hover {
+            background: #f7931e;
+            transform: scale(1.05);
+            box-shadow: 0 5px 20px rgba(0,0,0,0.3);
+        }
+
+        .om-symbol {
+            font-size: 3em;
+            color: #ff6b35;
+            margin: 20px 0;
+        }
+
+        @media (max-width: 768px) {
+            h1 { font-size: 2em; }
+            .section { padding: 20px; }
+            .section h2 { font-size: 1.8em; }
+            nav a { margin: 0 10px; font-size: 1em; }
+            .services { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="om-symbol">🕉️</div>
+        <h1>ପତିତପାବନ ଦେବ</h1>
+        <p class="subtitle">ଶ୍ରୀ ଜଗନ୍ନାଥ ମନ୍ଦିର</p>
+        <p class="location">📍 ବଡପୋଖରିଆ, ଖୋର୍ଦ୍ଧା, ଓଡ଼ିଶା</p>
+    </header>
+
+    <nav>
+        <a href="#about">ବିଷୟରେ</a>
+        <a href="#services">ସେବା</a>
+        <a href="#donate">ଦାନ</a>
+        <a href="#contact">ଯୋଗାଯୋଗ</a>
+    </nav>
+
+    <div class="container">
+        <div class="section deity-section" id="about">
+            <h2>🙏 ପତିତପାବନ ଦେବଙ୍କୁ ସ୍ୱାଗତ 🙏</h2>
+            <p>
+                ବ୍ରହ୍ମାଣ୍ଡର ପ୍ରଭୁ ଜଗନ୍ନାଥଙ୍କ ପବିତ୍ର ମନ୍ଦିରକୁ ସ୍ୱାଗତ। 
+                ପତିତପାବନ ଦେବ ମନ୍ଦିର ଖୋର୍ଦ୍ଧା ଜିଲ୍ଲାର ବଡପୋଖରିଆରେ ଭକ୍ତି ଓ 
+                ଆଧ୍ୟାତ୍ମିକ ଶାନ୍ତିର ଏକ ପ୍ରତୀକ ଭାବରେ ଠିଆ ହୋଇଛି।
+            </p>
+            <p>
+                ପ୍ରଭୁ ଜଗନ୍ନାଥ, ତାଙ୍କର ଦିବ୍ୟ ଭାଇ ପ୍ରଭୁ ବଳଭଦ୍ର ଏବଂ 
+                ଦେବୀ ସୁଭଦ୍ରାଙ୍କ ସହିତ, ଶୁଦ୍ଧ ହୃଦୟ ସହିତ ଏହି ପବିତ୍ର ମନ୍ଦିର 
+                ପରିଦର୍ଶନ କରୁଥିବା ସମସ୍ତ ଭକ୍ତମାନଙ୍କୁ ଆଶୀର୍ବାଦ ପ୍ରଦାନ କରନ୍ତି।
+            </p>
+            <p>
+                ମନ୍ଦିର ସ୍ଥାନୀୟ ସମୁଦାୟ ପାଇଁ ଏକ ଆଧ୍ୟାତ୍ମିକ କେନ୍ଦ୍ର ଭାବରେ 
+                କାର୍ଯ୍ୟ କରେ ଏବଂ ସମସ୍ତ ଜୀବନ କ୍ଷେତ୍ରର ଭକ୍ତମାନଙ୍କୁ ସ୍ୱାଗତ କରେ।
+            </p>
+            <p style="font-style: italic; color: #ff6b35; font-size: 1.4em; margin-top: 30px;">
+                "ଜୟ ଜଗନ୍ନାଥ"
+            </p>
+        </div>
+
+        <div class="section" id="services">
+            <h2>🌺 ମନ୍ଦିର ସେବା 🌺</h2>
+            <div class="services">
+                <div class="service-card">
+                    <h3>🌅 ନିତ୍ୟ ପୂଜା</h3>
+                    <p>ପ୍ରଭୁ ଜଗନ୍ନାଥଙ୍କ ପାଇଁ ପ୍ରଭାତ ଓ ସନ୍ଧ୍ୟା ଆରତି ଏବଂ ଭୋଗ ଅର୍ପଣ</p>
+                </div>
+                <div class="service-card">
+                    <h3>🎉 ପର୍ବ ପାଳନ</h3>
+                    <p>ରଥଯାତ୍ରା, ସ୍ନାନ ପୂର୍ଣ୍ଣିମା ଓ ଅନ୍ୟାନ୍ୟ ପର୍ବର ମହାନ ଉତ୍ସବ</p>
+                </div>
+                <div class="service-card">
+                    <h3>🕉️ ବିଶେଷ ସେବା</h3>
+                    <p>ଭକ୍ତ ଓ ସେମାନଙ୍କ ପରିବାର ପାଇଁ ବ୍ୟକ୍ତିଗତ ପୂଜା ସେବା</p>
+                </div>
+                <div class="service-card">
+                    <h3>📿 ଆଧ୍ୟାତ୍ମିକ ପ୍ରବଚନ</h3>
+                    <p>ଆଧ୍ୟାତ୍ମିକ ବିକାଶ ପାଇଁ ନିୟମିତ ପ୍ରବଚନ ଓ ଭଜନ ସଭା</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="section donation-section" id="donate">
+            <h2>💝 ମନ୍ଦିର ଟ୍ରଷ୍ଟକୁ ସାହାଯ୍ୟ କରନ୍ତୁ 💝</h2>
+            <p style="font-size: 1.3em; margin: 20px 0; color: #2e7d32;">
+                ଆପଣଙ୍କର ଉଦାର ଦାନ ଆମକୁ ମନ୍ଦିର ରକ୍ଷଣାବେକ୍ଷଣ, ନିତ୍ୟ ରୀତିନୀତି 
+                ପାଳନ, ପର୍ବ ପାଳନ ଏବଂ ସମୁଦାୟକୁ ସେବା କରିବାରେ ସାହାଯ୍ୟ କରେ। 
+                ପ୍ରତ୍ୟେକ ଅବଦାନ, ବଡ କିମ୍ବା ଛୋଟ, ପ୍ରଭୁ ଜଗନ୍ନାଥଙ୍କ ଦ୍ୱାରା 
+                ଆଶୀର୍ବାଦପ୍ରାପ୍ତ ହୁଏ।
+            </p>
+            
+            <div class="donation-box">
+                <h3 style="color: #5e35b1; margin-bottom: 20px; font-size: 1.4em;">PhonePe ମାଧ୍ୟମରେ ଦାନ କରନ୍ତୁ</h3>
+                <div class="qr-placeholder">
+                    <div>
+                        <p>📱 PhonePe QR କୋଡ୍</p>
+                        <p style="font-size: 0.9em; margin-top: 10px;">
+                            ଏଠାରେ ଆପଣଙ୍କର PhonePe QR କୋଡ୍ ଚିତ୍ର ରଖନ୍ତୁ
+                        </p>
+                        <p style="font-size: 0.8em; margin-top: 20px; opacity: 0.8;">
+                            (ଏହି ପ୍ଲେସହୋଲ୍ଡରକୁ ଆପଣଙ୍କର ପ୍ରକୃତ QR କୋଡ୍ ଚିତ୍ର ସହିତ ବଦଳାନ୍ତୁ)
+                        </p>
+                    </div>
+                </div>
+                <div class="donation-info">
+                    <p>🙏 ଦାନ କରିବାକୁ ସ୍କାନ କରନ୍ତୁ 🙏</p>
+                    <p style="margin-top: 10px; font-size: 1em;">ସମସ୍ତ ଦାନ 80G ଅଧୀନରେ କର ମୁକ୍ତ</p>
+                </div>
+            </div>
+
+            <p style="margin-top: 30px; font-size: 1.2em;">
+                <strong>ଦାନ କରିବାର ଅନ୍ୟ ଉପାୟ:</strong><br>
+                ବ୍ୟାଙ୍କ ସ୍ଥାନାନ୍ତରଣ | UPI | ମନ୍ଦିର କାଉଣ୍ଟରରେ ନଗଦ
+            </p>
+        </div>
+
+        <div class="section" id="contact">
+            <h2>📞 ଆମ ସହିତ ଯୋଗାଯୋଗ କରନ୍ତୁ 📞</h2>
+            <div class="contact-info">
+                <p><strong>ଠିକଣା:</strong> ପତିତପାବନ ଦେବ ମନ୍ଦିର, ବଡପୋଖରିଆ, ଖୋର୍ଦ୍ଧା, ଓଡ଼ିଶା</p>
+                <p style="margin-top: 15px;"><strong>ମନ୍ଦିର ସମୟ:</strong></p>
+                <p>ସକାଳ: ୬:୦୦ ଠାରୁ ୧୨:୦୦</p>
+                <p>ସନ୍ଧ୍ୟା: ୪:୦୦ ଠାରୁ ୯:୦୦</p>
+                <p style="margin-top: 15px;"><strong>ସେବା ବୁକିଂ ଓ ପଚାରିବା ପାଇଁ:</strong></p>
+                <p>ଫୋନ୍: <a href="tel:8637264737" style="color: #ff6b35; text-decoration: none; font-weight: bold;">8637264737</a></p>
+            </div>
+            <a href="#donate" class="btn">ଦାନ କରନ୍ତୁ</a>
+        </div>
+    </div>
+
+    <footer>
+        <div class="om-symbol">🕉️</div>
+        <h3>ପତିତପାବନ ଦେବ - ଜଗନ୍ନାଥ ମନ୍ଦିର</h3>
+        <p style="margin: 15px 0;">ବଡପୋଖରିଆ, ଖୋର୍ଦ୍ଧା, ଓଡ଼ିଶା</p>
+        <p style="font-style: italic; font-size: 1.3em; margin-top: 20px;">
+            "ସର୍ବେ ଭବନ୍ତୁ ସୁଖିନଃ ସର୍ବେ ସନ୍ତୁ ନିରାମୟାଃ"<br>
+            ସମସ୍ତେ ସୁଖୀ ହୁଅନ୍ତୁ, ସମସ୍ତେ ସୁସ୍ଥ ହୁଅନ୍ତୁ
+        </p>
+        <p style="margin-top: 20px; opacity: 0.8;">© ୨୦୨୬ ପତିତପାବନ ଦେବ ମନ୍ଦିର ଟ୍ରଷ୍ଟ। ସମସ୍ତ ଅଧିକାର ସଂରକ୍ଷିତ।</p>
+        <p style="margin-top: 15px; font-size: 0.95em; opacity: 0.85;">
+            Design & Developed by <strong>Saroj Kumar Barisal</strong>
+        </p>
+    </footer>
+
+    <script>
+        // Smooth scrolling for navigation
+        document.querySelectorAll('nav a').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            });
+        });
+
+        // Add animation on scroll
+        const sections = document.querySelectorAll('.section');
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, { threshold: 0.1 });
+
+        sections.forEach(section => {
+            section.style.opacity = '0';
+            section.style.transform = 'translateY(20px)';
+            section.style.transition = 'all 0.6s ease-out';
+            observer.observe(section);
+        });
+    </script>
+</body>
+</html>
